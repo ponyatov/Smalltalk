@@ -11,6 +11,11 @@
 \titleformat{\chapter}{\Large\bfseries}{\thechapter.}{1em}{}
 \titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
 
+% graphics
+\usepackage[pdftex]{graphicx}
+% \newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#2}\textbf{#1}\bigskip}
+\newcommand{\fig}[2]{\noindent\includegraphics[#2]{#1}}
+
 % xcolor fixes
 \usepackage{xcolor}
 \definecolor{red}{rgb}{0.7,0,0}		% R
@@ -37,12 +42,22 @@
 \ifthenelse{\equal{\value{secdepth}}{-3}}{\subsection{#1}}{}
 \ifthenelse{\equal{\value{secdepth}}{-4}}{\subsubsection{#1}}{}
 }
-\newcommand{\secly}[1]{
-\section*{#1}
-\addcontentsline{toc}{section}{#1}
-}
+\newcommand{\secly}[1]{\section*{#1} \addcontentsline{toc}{section}{#1} \refstepcounter{section}}
+\newcommand{\subsecly}[1]{\subsection*{#1} \addcontentsline{toc}{subsection}{#1}  \refstepcounter{subsection}}
 
 % computer-related markup: manuals, listings, CS
+
+%% software menu & keys
+\usepackage[os=win]{menukeys}
+\usepackage{amssymb} % windows key
+% \newcommand{\winstart}{$\boxplus$}
+% \newcommand{\winr}{\keys{\winstart+R}}
+\newcommand{\lms}{$\lhd$}
+% \newcommand{\dblms}{$\lhd\lhd$}
+\newcommand{\mms}{$\bigtriangleup$}
+\newcommand{\rms}{$\rhd$}
+% \newcommand{\checkbox}{$\boxtimes$}
+% \newcommand{\uncheckbox}{$\square$}
 
 %% listings
 \usepackage{verbatim}
@@ -63,6 +78,9 @@ commentstyle=\color{blue}\textbf
 \newcommand{\fl}{\texttt{FLProg}}
 \newcommand{\win}{\texttt{Windows}}
 \newcommand{\linux}{\texttt{Linux}}
+\newcommand{\java}{\texttt{Java}}
+\newcommand{\cpp}{$C_+^+$}
+\newcommand{\git}{\texttt{git}}
 
 % [nosep] option in lists/enums
 \usepackage{enumitem}

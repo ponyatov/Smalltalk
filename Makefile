@@ -1,6 +1,6 @@
 
-CWD = $(CURDIR)
-MODULE = Smalltalk
+CWD    = $(CURDIR)
+MODULE = $(notdir $(CWD))
 
 NOW = $(shell date +%d%m%y)
 REL = $(shell git rev-parse --short=4 HEAD)
@@ -8,20 +8,31 @@ REL = $(shell git rev-parse --short=4 HEAD)
 TEX  = $(MODULE).tex header.tex
 TEX += bib.tex
 TEX += intro.tex install.tex
+TEX += interface.tex
 TEX += meta/meta.tex
+
+IMG  = img/firstrun.png img/settings.png img/font.png
+IMG += img/lesnevsky.png img/kir.jpeg img/inside1.png img/inside2.png 
+IMG += img/blue.jpg img/red.png img/green.png img/little.jpeg
+IMG += img/winmenu.png img/sysexit.png img/wmenu.png img/halo.png
 
 LATEX = pdflatex -halt-on-error
 
-$(MODULE).pdf: $(TEX) $(SRC)
+$(MODULE).pdf: $(TEX) $(SRC) $(IMG)
 	$(LATEX) $< | tail -n7
 	$(LATEX) $< | tail -n7
 	# $(LATEX) $<
 
-# $(MODULE)_$(NOW)-$(REL).zip:
-# 	git archive --format zip --output $@ HEAD
+pdf: $(MODULE)_$(NOW)-$(REL).pdf
+$(MODULE)_$(NOW)-$(REL).pdf: $(MODULE).pdf Makefile
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+		-dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
+# /screen /ebook /prepress
+
+################################################################### INSTALL
 
 install: pharo pharo.version doc
-	sudo apt install `cat apt.txt`
+	sudo apt install -u `cat apt.txt`
 pharo: distr/pharo64-linux-stable.zip
 	unzip -x $< && touch $@
 pharo.version: distr/pharo64.zip
@@ -30,6 +41,8 @@ distr/pharo64-linux-stable.zip:
 	wget -c -O $@ https://files.pharo.org/get-files/70/pharo64-linux-stable.zip
 distr/pharo64.zip:
 	wget -c -O $@ https://files.pharo.org/get-files/70/pharo64.zip
+
+###################################################################### DOC	
 
 doc: doc/LittleSmalltalk.pdf doc/KirutenkoSaveliev.pdf doc/DSL.pdf doc/PharoByExample.pdf \
 		doc/StdANSI_19.pdf doc/Bluebook.pdf doc/InsideSmalltalkI.pdf doc/InsideSmalltalkII.pdf doc/PERQ.pdf doc/Self.pdf
@@ -54,14 +67,20 @@ doc/PERQ.pdf:
 doc/Self.pdf:
 	wget -c -O $@ http://bibliography.selflanguage.org/_static/implementation.pdf
 
-MERGE  = Makefile README.md .gitignore distr doc
-MERGE += $(TEX)
+################################################################# SHADOW git	
 
-# merge:
-# 	git checkout master
-# 	git checkout shadow -- $(MERGE)
+MERGE  = Makefile README.md .gitignore distr doc
+MERGE += $(TEX) $(SRC) $(IMG)
+
+merge:
+	git checkout master
+	git checkout shadow -- $(MERGE)
 
 release:
 	git tag $(NOW)-$(REL)
 	git push -v && git push -v --tags
 # 	git checkout shadow
+
+zip: $(MODULE)_$(NOW)-$(REL).zip
+$(MODULE)_$(NOW)-$(REL).zip:
+	git archive --format zip --output $@ HEAD
