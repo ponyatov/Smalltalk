@@ -6,12 +6,16 @@ NOW = $(shell date +%d%m%y)
 REL = $(shell git rev-parse --short=4 HEAD)
 
 TEX  = $(MODULE).tex header.tex
+TEX += bib.tex
+TEX += intro.tex install.tex
+TEX += meta/meta.tex
+
 LATEX = pdflatex -halt-on-error
 
 $(MODULE).pdf: $(TEX) $(SRC)
-	# $(LATEX) $< | tail -n7
-	# $(LATEX) $< | tail -n7
-	$(LATEX) $<
+	$(LATEX) $< | tail -n7
+	$(LATEX) $< | tail -n7
+	# $(LATEX) $<
 
 # $(MODULE)_$(NOW)-$(REL).zip:
 # 	git archive --format zip --output $@ HEAD
@@ -50,7 +54,8 @@ doc/PERQ.pdf:
 doc/Self.pdf:
 	wget -c -O $@ http://bibliography.selflanguage.org/_static/implementation.pdf
 
-# MERGE  = Makefile README.md .gitignore distr doc slides
+MERGE  = Makefile README.md .gitignore distr doc
+MERGE += $(TEX)
 
 # merge:
 # 	git checkout master
