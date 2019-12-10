@@ -1,0 +1,13 @@
+*~
+*.swp
+*.log
+*.aux
+*.toc
+*.out
+*.pdf
+
+Pharo7.0*
+bin/
+lib/
+pharo
+pharo.version

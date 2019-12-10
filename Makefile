@@ -9,8 +9,9 @@ TEX  = $(MODULE).tex header.tex
 LATEX = pdflatex -halt-on-error
 
 $(MODULE).pdf: $(TEX) $(SRC)
-	$(LATEX) $< | tail -n7
-	$(LATEX) $< | tail -n7
+	# $(LATEX) $< | tail -n7
+	# $(LATEX) $< | tail -n7
+	$(LATEX) $<
 
 # $(MODULE)_$(NOW)-$(REL).zip:
 # 	git archive --format zip --output $@ HEAD
