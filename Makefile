@@ -16,6 +16,8 @@ IMG += img/lesnevsky.png img/kir.jpeg img/inside1.png img/inside2.png
 IMG += img/blue.jpg img/red.png img/green.png img/little.jpeg
 IMG += img/winmenu.png img/sysexit.png img/wmenu.png img/halo.png
 
+SRC  = pharo.rc
+
 LATEX = pdflatex -halt-on-error
 
 $(MODULE).pdf: $(TEX) $(SRC) $(IMG)

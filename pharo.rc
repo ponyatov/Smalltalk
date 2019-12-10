@@ -1,0 +1,2 @@
+#!/bin/sh
+./pharo Pharo7.0.4-0-64bit-ccd1f64.image &
