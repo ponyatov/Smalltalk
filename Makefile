@@ -8,13 +8,15 @@ REL = $(shell git rev-parse --short=4 HEAD)
 TEX  = $(MODULE).tex header.tex
 TEX += bib.tex
 TEX += intro.tex install.tex
-TEX += interface.tex
+TEX += interface.tex baselang.tex
 TEX += meta/meta.tex
 
 IMG  = img/firstrun.png img/settings.png img/font.png
 IMG += img/lesnevsky.png img/kir.jpeg img/inside1.png img/inside2.png 
 IMG += img/blue.jpg img/red.png img/green.png img/little.jpeg
 IMG += img/winmenu.png img/sysexit.png img/wmenu.png img/halo.png
+IMG += img/playground.png img/2p3.png img/plmenu.png img/inspect.png
+IMG += img/browser.png
 
 SRC  = pharo.rc
 
@@ -71,7 +73,7 @@ doc/Self.pdf:
 
 ################################################################# SHADOW git	
 
-MERGE  = Makefile README.md .gitignore distr doc
+MERGE  = Makefile README.md .gitignore distr doc apt.txt
 MERGE += $(TEX) $(SRC) $(IMG)
 
 merge:
