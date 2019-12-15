@@ -1,0 +1,31 @@
+\clearpage
+\secly{Установка}
+
+Ограниченная версия \met\ описанная в этом руководстве, поставляется в составе
+файлов, доступных по адресу\\
+\url{https://github.com/ponyatov/Smalltalk/tree/master/metaL}\\
+или локально в каталоге \file{$\sim$/Smalltalk/metaL}.
+
+\fig{img/metacello.png}{height=.3\textheight}
+
+\noindent
+создать пустой пакет \met, \menu{World>Tools>Monticello Browser}, выбрать в фильтре \met, добавить репозиторий \menu{+Repository>filetree://},
+выбрать каталог \file{$\sim$/Smalltalk/metaL}. 
+В правой части появится \file{.../metaL.package}. Сделать на нем \menu{\rms>Open package>metaL.package>Load}
+
+\fig{img/opengit.png}{height=.45\textheight}
+
+\fig{img/metopen.png}{height=.5\textheight}
+
+После установки пакета через Monticello или сброса в начальное состояние
+после ручного ввода кода из этого руководства требуется переинициализация
+через метод \verb|MetaL.install|.
+
+\medskip
+\fig{img/plinstall.png}{height=.5\textheight}
+
+Этод \term{метод класса}\ вызовет соответствующие методы у всех классов,
+наследованных от \class{MFrame}.
+
+\fig{img/install.png}{width=.7\textwidth}
+

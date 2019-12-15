@@ -8,17 +8,20 @@ REL = $(shell git rev-parse --short=4 HEAD)
 TEX  = $(MODULE).tex header.tex
 TEX += bib.tex
 TEX += intro.tex install.tex
-TEX += interface.tex baselang.tex
-TEX += meta/meta.tex
+TEX += interface.tex baselang.tex browser.tex
+TEX += meta/meta.tex meta/install.tex meta/frame.tex meta/eds.tex
+TEX += akka/akka.tex
 
 IMG  = img/firstrun.png img/settings.png img/font.png
 IMG += img/lesnevsky.png img/kir.jpeg img/inside1.png img/inside2.png 
 IMG += img/blue.jpg img/red.png img/green.png img/little.jpeg
 IMG += img/winmenu.png img/sysexit.png img/wmenu.png img/halo.png
 IMG += img/playground.png img/2p3.png img/plmenu.png img/inspect.png
-IMG += img/browser.png
+IMG += img/browser.png img/br1.png img/MFrame.png img/install.png
+IMG += img/plinstall.png img/metacello.png img/opengit.png img/metopen.png
+IMG += img/minsky.png
 
-SRC  = pharo.rc
+SRC  = pharo.rc meta/MetaL.st meta/MFrame.st meta/initialize.st meta/install.st
 
 LATEX = pdflatex -halt-on-error
 
@@ -32,6 +35,9 @@ $(MODULE)_$(NOW)-$(REL).pdf: $(MODULE).pdf Makefile
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
 		-dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
 # /screen /ebook /prepress
+
+clean:
+	rm *.log *.aux *.toc
 
 ################################################################### INSTALL
 
