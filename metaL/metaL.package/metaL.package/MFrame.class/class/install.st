@@ -1,0 +1,3 @@
+actions
+install
+	type := 'frame'

@@ -80,16 +80,16 @@ doc/Self.pdf:
 ################################################################# SHADOW git	
 
 MERGE  = Makefile README.md .gitignore distr doc apt.txt
-MERGE += $(TEX) $(SRC) $(IMG)
+MERGE += $(TEX) $(SRC) $(IMG) metaL
 
 merge:
 	git checkout master
 	git checkout shadow -- $(MERGE)
 
-release:
+release: pdf
 	git tag $(NOW)-$(REL)
 	git push -v && git push -v --tags
-# 	git checkout shadow
+	git checkout shadow
 
 zip: $(MODULE)_$(NOW)-$(REL).zip
 $(MODULE)_$(NOW)-$(REL).zip:

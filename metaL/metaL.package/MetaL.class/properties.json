@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/12/2019 10:54",
+	"super" : "Object",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"config"
+	],
+	"instvars" : [ ],
+	"name" : "MetaL",
+	"type" : "normal"
+}
