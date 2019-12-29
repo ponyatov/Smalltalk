@@ -1,0 +1,1 @@
+embedded Linux a top of Buildroot

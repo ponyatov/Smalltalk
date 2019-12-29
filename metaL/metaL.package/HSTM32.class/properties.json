@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/21/2019 20:57",
+	"super" : "HMCU",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"f030"
+	],
+	"instvars" : [ ],
+	"name" : "HSTM32",
+	"type" : "normal"
+}

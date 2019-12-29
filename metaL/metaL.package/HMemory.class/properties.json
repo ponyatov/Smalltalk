@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/19/2019 01:06",
+	"super" : "HW",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HMemory",
+	"type" : "normal"
+}

@@ -1,0 +1,42 @@
+\clearpage
+\secrel{System Browser: редактор кода}
+
+\fig{img/browser.png}{width=\textwidth}
+\clearpage
+
+\noindent
+Наиболее часто используемое окно\ --- просмотр и редактирование классов.\\
+По верхнему ряду:
+\begin{itemize}[nosep]
+    \item пакеты
+    \item классы
+    \item интерфейсы/категории
+    \item методы
+    \item нижняя половина: редактор кода
+\end{itemize}
+
+\fig{img/br1.png}{width=.55\textwidth}
+
+\noindent
+Начнем проект с создания пакета \met\ --- \textit{\emph{meta}programming \emph{Lang}uage}.\\
+Откройте браузер \menu{World>Tools>System Browser} или \keys{Ctrl+O+B}, затем \keys{\rms}\ в области пакетов,
+\menu{New package>\met>OK}. Затем создадим два новых класса: \keys{\lms}\ на новом пакете, внизу в редакторе кода
+измените определение, и \term{подтвердите изменение кода} \menu{\keys{\rms}>Accept} или \keys{Ctrl+S}:
+
+\lst{meta/MetaL.st}{MetaL.st}
+
+Класс \class{MetaL} будет содержать служебные методы и \term{переменные класса}, 
+общие для всей системы \met: процедуру инициализации и т.п.
+
+\clearpage
+\lst{meta/MFrame.st}{MFrame.st}
+\lst{meta/initialize.st}{конструктор \class{MFrame}}
+
+\fig{img/MFrame.png}{width=\textwidth}
+
+Браузер работает в двух режимах, переключаемых под полем категорий: Instance side и Class side. 
+При переключании показываются соответственно список методов экземпляра, или самого класса.
+
+\fig{img/install.png}{width=\textwidth}
+
+\lst{meta/install.st}{инициализация \met}

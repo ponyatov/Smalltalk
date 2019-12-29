@@ -15,3 +15,12 @@ Pharo7.0-32bit-ccd1f64.sources Pharo7.0.4-0-64bit-ccd1f64.changes Pharo7.0.4-0-6
 
 Smalltalk_??????-????.zip
 pharo-local/
+
+*.dll
+*.exe
+
+github-cache/
+std???
+Pharo.ini
+gst.im
+wiki/

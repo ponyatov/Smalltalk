@@ -1,0 +1,46 @@
+\secrel{Основные инструменты и основы языка}\secdown
+
+\input{base/kay}
+
+\clearpage
+\secrel{Playground: командная консоль}\label{playground}
+
+\fig{img/playground.png}{height=.5\textheight}
+
+\medskip
+\noindent\menu{World>Toold>Playgroun} или \keys{Ctrl+O+W}\\
+Рабочее окно, в котором могут быть введены, отредактированы и выполнены произвольные фрагменты \st-кода.
+Управление системой через код как команды, определение переменных для хранения структур данных, с которыми вы работаете.
+После выделения куска кода нажать правую кнопку мыши \keys{\rms}, повится контекстное меню с доступными операциями.
+
+\medskip\noindent
+
+\fig{img/2p3.png}{width=.55\textwidth}
+
+\fig{img/plmenu.png}{width=.57\textwidth}
+
+\begin{description}
+    \item{Do it} \keys{Ctrl+D} выполнить выделенный код
+    \item{Print it} \keys{Ctrl+P} вычислить выражение и вывести результат под курсор
+    \item{Inspect it} \keys{Ctrl+I} инспектор \ref{inspect}
+\end{description}
+
+\secrel{Inspect: просмотр объекта}\label{inspect}
+
+\fig{img/inspect.png}{height=.5\textheight}
+
+Просмотр и взаимодействие с конкретным объектом. Окно состоит из двух частей:
+\begin{itemize}
+    \item просмотр полей объекта: значения переменных
+    \item нижняя часть\ --- интерактивный редактор кода аналогичный \ref{playground}
+\end{itemize}
+
+\input{base/prim}
+\input{base/vars}
+\input{base/oop}
+\input{base/cont}
+\input{base/loops}
+
+\secrel{Monticello: управление репозиториями}
+
+\secup

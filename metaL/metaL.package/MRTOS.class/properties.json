@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/19/2019 01:33",
+	"super" : "MOS",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MRTOS",
+	"type" : "normal"
+}

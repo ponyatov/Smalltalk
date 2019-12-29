@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/16/2019 11:38",
+	"super" : "CType",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Cptr",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/16/2019 09:47",
+	"super" : "MFrame",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"main"
+	],
+	"instvars" : [ ],
+	"name" : "C89",
+	"type" : "normal"
+}

@@ -1,9 +1,15 @@
 {
 	"instance" : {
-		"initialize:" : "DmitryPonyatov 12/12/2019 15:24"
+		"printString" : "DmitryPonyatov 12/16/2019 10:52",
+		"_pad:" : "DmitryPonyatov 12/16/2019 10:49",
+		"head:" : "DmitryPonyatov 12/16/2019 11:19",
+		"initialize:" : "DmitryPonyatov 12/16/2019 10:50",
+		"at:put:" : "DmitryPonyatov 12/21/2019 21:08",
+		"dump:pfx:" : "DmitryPonyatov 12/16/2019 11:27",
+		"_val" : "DmitryPonyatov 12/16/2019 10:54"
 	},
 	"class" : {
 		"initialize:" : "DmitryPonyatov 12/12/2019 16:09",
-		"install" : "DmitryPonyatov 12/12/2019 15:19"
+		"install" : "DmitryPonyatov 12/14/2019 22:07"
 	}
 }

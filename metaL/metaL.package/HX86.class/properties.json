@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/19/2019 00:53",
+	"super" : "HARCH",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HX86",
+	"type" : "normal"
+}

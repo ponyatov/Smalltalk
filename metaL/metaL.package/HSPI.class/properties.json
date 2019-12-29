@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DmitryPonyatov 12/19/2019 01:12",
+	"super" : "HPeriph",
+	"category" : "metaL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HSPI",
+	"type" : "normal"
+}

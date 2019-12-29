@@ -1,0 +1,12 @@
+MFrame subclass: #HW
+HW subclass: #HARCH
+HARCH subclass: #HARM
+HARCH subclass: #HX86
+HW subclass: #HCPU
+HCPU subclass: #HMCU
+HARM subclass: #HCortexM
+HW subclass: #HMemory
+HMemory subclass: #HFlash
+HMemory subclass: #HRAM
+HW subclass: #HClock
+HW subclass: #HPeriph

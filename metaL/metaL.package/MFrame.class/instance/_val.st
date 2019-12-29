@@ -1,0 +1,3 @@
+printing
+_val
+	^ val

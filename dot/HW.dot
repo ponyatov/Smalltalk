@@ -1,0 +1,13 @@
+digraph {
+    //rankdir=LR;
+    HW -> ARCH -> X86;
+    ARCH -> ARM -> CortexM;
+    HW -> CPU -> MCU;
+    HW -> Memory -> Flash;
+    Memory -> RAM;
+    HW -> Periph -> GPIO;
+    Periph -> UART;
+    Periph -> SPI;
+    Periph -> Timer;
+    HW -> Clock;
+}

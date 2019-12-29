@@ -1,0 +1,8 @@
+digraph {
+    // rankdir=LR;
+    C89 -> CType -> Cvoid;
+    CType -> Cptr;
+    CType -> Cchar;
+    CType -> Cint;
+    CType -> Cfloat;
+}

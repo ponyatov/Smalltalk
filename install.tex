@@ -9,10 +9,34 @@ $ cd ~
 ~$ git clone -o gh https://github.com/ponyatov/Smalltalk.git
 ~$ cd Smalltalk
 ~/Smalltalk$ make install
-~/Smalltalk$ ./pharo.rc
+~/Smalltalk$ ./rc.rc
 \end{verbatim}
-\lst{pharo.rc}{pharo.rc}
+\lst{rc.rc}{rc.rc}
 
+\subsecly{\win}
+
+Для разработки под \win\ кроме версии \st\ Pharo нужно установить
+\href{http://www.mingw.org/}{MinGW/MSYS}\ --- реализация пакета компиляторов и утилит GNU toolchain
+для \win.
+
+\begin{lstlisting}
+PATH = C:\MinGW\bin;C:\MinGW\msys\1.0\bin;%PATH%
+\end{lstlisting}
+
+\begin{description}[nosep]
+    \item{\file{mingw32-gcc}} компилятор \ci
+    \item{\file{mingw32-gcc-g++}} компилятор \cpp
+    % \item{\file{msys-base}}
+    \item{\file{msys-make}} утилита автоматической сборки проектов \href{http://www.opennet.ru/docs/RUS/gnumake/}{GNU Make}
+    \item{\file{msys-wget}} утилита загрузки по ftp/http
+    \item{\file{msys-unzip}}
+\end{description}
+
+\medskip\noindent
+Руководство включает набор файлов, который распространяется через \href{https://github.com/ponyatov/Smalltalk}{GitHub},
+для загрузки и обновления требуется установленный клиент \url{https://git-scm.com}
+
+\clearpage
 \subsecly{\ph: системные файлы (после прочтения съесть!)}\label{image}
 
 Базовая установка \ph\ состоит из четырех компонентов:
@@ -85,3 +109,5 @@ $ cd ~
 \end{itemize}    
 
 \fig{img/font.png}{height=\textheight}
+
+\input{meta/install}
